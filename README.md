@@ -164,6 +164,7 @@ accdesc="resstr(0x7AB4, library(shell32.dll))"
 An attribute used to display content. Known to also work with [Themeable](#themeable---themeable), [ResourceString](#resourcestring---resstr), [Icon](#icon---icon), [DrawThemeBackground](#drawthemebackground---dtb).
 
 **Example:**
+
 This displays the icon 129 from NetworkExplorer.dll/NetworkExplorer.dll.mun.
 ```
 <Button3d content="icon(129, sysmetric(49), sysmetric(50), library(NetworkExplorer.dll))"/>
@@ -316,6 +317,7 @@ cursor="IBeam"
 
 # DrawThemeBackground - dtb()
 For use of a `msstyles` image property. Known to be used with [Content](#content), [Themeable](#themeable---themeable), [Background](#background).
+
 ⚠️ The class, part, or state it reads from doesn't have to be a graphic. It's set by `BGTYPE:ENUM`. So you can have gradients (`horizontal`, `vertical`, and `radial`), `borderfill`, or `images`.
 
 **Syntax:**
@@ -351,6 +353,7 @@ gtc(class, part, state, id)
 - `id` - ID number.
 
 **Example:**
+
 This will make the text (or foreground) the color of the `TEXTCOLOR:COLOR` property in: `Explorer & Shell > Explorer > Items View > ItemsView`
 ```
 foreground="gtc(ItemsView, 0, 0, 3803)"
@@ -425,6 +428,7 @@ gtmet(class, part, state, id)
 - `id` - ID number.
 
 **Example:**
+
 This will set the width as defined by the `WIDTH:INT` property in `Buttons, Boxes & Controls > Buttons > Navigation > BackButton`:
 ```
 width="gtmet(Navigation, 1, 0, 2416)"
@@ -459,6 +463,7 @@ themeable(themed, classic)
 - `classic` - Determines what value to use if a part is Aero styled or Classic styled. If a theme is applied it uses the first value, if you're using Windows Classic/Standard it uses the second value. It's best to leave as a hardcoded value.
 
 **Example:**
+
 The font will be the color defined by the `TEXTCOLOR:COLOR` property in `Explorer & Shell > Explorer > Items View > ItemsView`, however if this change is in a system DLL and windows classic was enabled, the font will be Window Text as defined in the control panel.
 ```
 foreground="themeable(gtc(ItemsView, 0, 0, 3803), windowtext)"
@@ -493,6 +498,7 @@ height="10rp"
 Allows for opening executable programs.
 
 **Example:**
+
 This will open explorer.exe.
 ```
 shellexecute="%windir%\\explorer.exe"
@@ -516,6 +522,7 @@ ShellExecuteParams="shell:::{78F3955E-3B90-4184-BD14-5397C15F1EFC}"
 Allows for navigating to a directory.
 
 **Example:**
+
 This will open the %windir%\System32 directory.
 ```
 navigationtargetroot="%windir%\\System32"
@@ -532,6 +539,7 @@ navigationtargetroot="Microsoft.Display"
 # NativationTargetRelative
 
 **Example:**
+
 This will take you to the pageWallpaper child page (also needs to be mentioned in the DLL's XMLFILE part).
 ```
 navigationtargetrelative="pageWallpaper"
@@ -682,6 +690,7 @@ The resource must be a 32bit bitmap (bitmap with alpha channel, even it doesn't 
 
 
 **content**
+
 _(Since it's kinda different with [resbmp](#resourcebitmap---resbmp) above. It's better to describe its meaning again)_
 
 `image_id` - The ID of the bitmap resource in the binary
@@ -705,17 +714,21 @@ _(Since it's kinda different with [resbmp](#resourcebitmap---resbmp) above. It's
 `library(binary)` - Binary name (Must be a DLL or exe in System32)
 
 **framewidth**
+
 Width of each frame. **Do not use rp for dpi-awareness in here or it will break your animation on hi-dpi**
-_(**Not an element's width.** You must specify it with [width](https://github.com/dominichayesferen/windows-dui-docs/blob/main/README.md#width))_
+_(**Not an element's width.** You must specify it with [width](#width))_
 
 **frameduration**
+
 Duration of each frame in milliseconds.
 
 **frameindex**
+
 Defines where the first frame should start playing at. Set it to `0` for the first frame.
 
 **play**
-`true/false` - Play or pause your animation. Better use it with [if](https://github.com/dominichayesferen/windows-dui-docs/blob/main/README.md#if-).
+
+`true/false` - Play or pause your animation. Better use it with [if](#if-).
 
 https://github.com/dominichayesferen/windows-dui-docs/raw/refs/heads/main/Bitmap111.bmp
 
@@ -731,7 +744,7 @@ Font is a shorthand property for FontSize, FontWeight, FontStyle,FontFace,FontQu
 ```
 
 `font_size` - Font size in pt.
-- See [FontSize](https://github.com/dominichayesferen/windows-dui-docs/blob/main/README.md#fontsize).
+- See [FontSize](#fontsize).
 
 `font_weight` - Font weight.
 - `DontCare : 0x0 (0)`
@@ -747,10 +760,10 @@ Font is a shorthand property for FontSize, FontWeight, FontStyle,FontFace,FontQu
 - `Heavy : 0x384 (900)`
 
 `font_style` - Font style. 
-- see [FontStyle](https://github.com/dominichayesferen/windows-dui-docs/blob/main/README.md#fontstyle).
+- see [FontStyle](#fontstyle).
 
 `font_face` - Font face. 
-- see [FontFace](https://github.com/dominichayesferen/windows-dui-docs/blob/main/README.md#fontface).
+- see [FontFace](#fontface).
 
 `font_quality` - Font quality. Very very optional.
 - `Default` - Follow system setting.
@@ -760,6 +773,7 @@ Font is a shorthand property for FontSize, FontWeight, FontStyle,FontFace,FontQu
 - `ClearType-Natural` - Force ClearType-Natural. This is different with ClearType.
 
 **Example:**
+
 This will set the font to 9pt Segoe UI Bold with no styling
 ```
 <element font="9pt;Bold;Normal;Segoe UI;ClearType"/>
@@ -776,9 +790,10 @@ This will set the font to 12pt Arial
 
 
 # WindowActive
-`true/false` - Use with [if](https://github.com/dominichayesferen/windows-dui-docs/blob/main/README.md#if-) to check if window is active or not. Has no effect when used in main element.
+`true/false` - Use with [if](#if-) to check if window is active or not. Has no effect when used in main element.
 
 **Example:**
+
 This will turn an element background to red if window is active, and yellow if not active
 ```
 <if WindowActive="true">
