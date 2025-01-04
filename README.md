@@ -683,7 +683,7 @@ https://github.com/user-attachments/assets/6f85694a-3add-4a4e-9998-2a84ff7f3ccf
 **Resource example:**
 The resource must be a 32bit bitmap (bitmap with alpha channel, even it doesn't have any transparent part). Its layout must be horizontal with the same width for each frame. See an attachment for example bitmap below
 
-https://github.com/dominichayesferen/windows-dui-docs/raw/refs/heads/main/Bitmap111.bmp
+https://github.com/angelbruni/windows-dui-docs/raw/refs/heads/main/Bitmap111.bmp
 
 **Example:**
 ```
