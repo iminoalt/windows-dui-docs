@@ -683,6 +683,8 @@ https://github.com/user-attachments/assets/6f85694a-3add-4a4e-9998-2a84ff7f3ccf
 **Resource example:**
 The resource must be a 32bit bitmap (bitmap with alpha channel, even it doesn't have any transparent part). Its layout must be horizontal with the same width for each frame. See an attachment for example bitmap below
 
+https://github.com/dominichayesferen/windows-dui-docs/raw/refs/heads/main/Bitmap111.bmp
+
 **Example:**
 ```
 <AnimationStrip content="resbmp(image_id,3,0,image_width,image_height,0,0,library(binary))" framewidth="25" frameduration="80" frameindex="0"/>
@@ -729,8 +731,6 @@ Defines where the first frame should start playing at. Set it to `0` for the fir
 **play**
 
 `true/false` - Play or pause your animation. Better use it with [if](#if-).
-
-https://github.com/dominichayesferen/windows-dui-docs/raw/refs/heads/main/Bitmap111.bmp
 
 - Contributed by Vaporvance, OjasK
 
