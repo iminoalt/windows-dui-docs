@@ -670,6 +670,8 @@ visible="parameter1"
 # AnimationStrip
 Play a simple looped animation in DirectUI [(example)](https://discord.com/channels/1140065636857421945/1202671741969760277/1269663947435278407)
 
+https://github.com/user-attachments/assets/6f85694a-3add-4a4e-9998-2a84ff7f3ccf
+
 **Resource example:**
 The resource must be a 32bit bitmap (bitmap with alpha channel, even it doesn't have any transparent part). Its layout must be horizontal with the same width for each frame. See an attachment for example bitmap below
 
@@ -713,7 +715,9 @@ Duration of each frame in milliseconds.
 Defines where the first frame should start playing at. Set it to `0` for the first frame.
 
 **play**
-`true/false` - Play or pause your animation. Better use it with if. 
+`true/false` - Play or pause your animation. Better use it with [if](https://github.com/dominichayesferen/windows-dui-docs/blob/main/README.md#if-).
+
+https://github.com/dominichayesferen/windows-dui-docs/raw/refs/heads/main/Bitmap111.bmp
 
 - Contributed by Vaporvance, OjasK
 
@@ -727,7 +731,7 @@ Font is a shorthand property for FontSize, FontWeight, FontStyle,FontFace,FontQu
 ```
 
 `font_size` - Font size in pt.
-- See FontSize.
+- See [FontSize](https://github.com/dominichayesferen/windows-dui-docs/blob/main/README.md#fontsize).
 
 `font_weight` - Font weight.
 - `DontCare : 0x0 (0)`
@@ -743,10 +747,10 @@ Font is a shorthand property for FontSize, FontWeight, FontStyle,FontFace,FontQu
 - `Heavy : 0x384 (900)`
 
 `font_style` - Font style. 
-- see FontStyle.
+- see [FontStyle](https://github.com/dominichayesferen/windows-dui-docs/blob/main/README.md#fontstyle).
 
 `font_face` - Font face. 
-- see FontFace.
+- see [FontFace](https://github.com/dominichayesferen/windows-dui-docs/blob/main/README.md#fontface).
 
 `font_quality` - Font quality. Very very optional.
 - `Default` - Follow system setting.
@@ -772,7 +776,7 @@ This will set the font to 12pt Arial
 
 
 # WindowActive
-`true/false` - Use with if to check if window is active or not. Has no effect when used in main element.
+`true/false` - Use with [if](https://github.com/dominichayesferen/windows-dui-docs/blob/main/README.md#if-) to check if window is active or not. Has no effect when used in main element.
 
 **Example:**
 This will turn an element background to red if window is active, and yellow if not active
