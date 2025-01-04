@@ -1,5 +1,9 @@
 # Windows 7+ DirectUI Documentation
 
+Also good sources:
+- https://github.com/seven-mile/dui70/blob/master/docs/ElementClass.g.txt
+- https://www.vistastylebuilder.com/forum/index.php?topic=215.0
+
 ## Contributing
 If you have additional documentation about DirectUI, fork the repository, add the documentation and make a commit.
 
