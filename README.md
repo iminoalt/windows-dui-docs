@@ -644,7 +644,7 @@ shadowintensity="parameter1"
 ```
 
 
-`parameter1` - The shadow intensity, a value between 0-100
+`parameter1` - The shadow intensity, a value between 0-200
 
 ⚠️ If not set, a default value (which is unknown) will be used.
 
