@@ -42,7 +42,7 @@ resbmp(0xA623, 2, -1, 16, 16, 0, 0, library(ieframe.dll))
 
 
 # ContentAlign - contentalign()
-Allows us to choose the alignment of the Content.
+Allows us to choose the alignment of the [Content](#content).
 
 - `TopLeft : 0x0 (0)`;
 - `TopCenter : 0x1 (1)`;
@@ -92,7 +92,7 @@ resstr(0x7AB4, library(shell32.dll))
 
 
 # Icon - icon()
-Allows for use of icon group resources in any binary DirectUI can read. Known to be used with Content, Themeable.
+Allows for use of icon group resources in any binary DirectUI can read. Known to be used with [Content](#content), [Themeable](#themeable---themeable).
 
 **Syntax:**
 ```
@@ -125,7 +125,7 @@ Used for styling depending on the statement. The if can be used for (I think) an
 
 
 # accname
-An attribute used to show a string in a name (normally the control label). Known to also work with ResourceString.
+An attribute used to show a string in a name (normally the control label). Known to also work with [ResourceString](#resourcestring---resstr).
 
 **Examples:**
 
@@ -143,7 +143,7 @@ accname="resstr(0x7AB4, library(shell32.dll))"
 
 
 # accdesc
-An attribute used to show a string in a description (normally used in tooltips). Known to also work with ResourceString.
+An attribute used to show a string in a description (normally used in tooltips). Known to also work with [ResourceString](#resourcestring---resstr).
 
 **Examples:**
 
