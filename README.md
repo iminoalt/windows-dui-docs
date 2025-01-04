@@ -112,7 +112,7 @@ icon(24, sysmetric(49), sysmetric(50), library(shell32.dll))
 - Contributed by @angelbruni
 
 
-# <if />
+# `<if />`
 Used for styling depending on the statement. The if can be used for (I think) any attribute.
 
 ```
@@ -161,7 +161,7 @@ accdesc="resstr(0x7AB4, library(shell32.dll))"
 
 
 # Content
-An attribute used to display content. Known to also work with Themeable, ResourceString, Icon, DrawThemeBackground.
+An attribute used to display content. Known to also work with [Themeable](#themeable---themeable), [ResourceString](#resourcestring---resstr), [Icon](#icon---icon), [DrawThemeBackground](#drawthemebackground---dtb).
 
 **Example:**
 This displays the icon 129 from NetworkExplorer.dll/NetworkExplorer.dll.mun.
@@ -173,7 +173,7 @@ This displays the icon 129 from NetworkExplorer.dll/NetworkExplorer.dll.mun.
 
 
 # Foreground
-Used to set the text colour. Known to work with AlphaRedGreenBlue, GetThemeColor.
+Used to set the text colour. Known to work with [AlphaRedGreenBlue](#alpharedgreenblue---argb), [GetThemeColor](#getthemecolor---gtc).
 
 **Example:**
 ```
@@ -184,7 +184,7 @@ foreground="argb(255, 90, 103, 121)"
 
 
 # AlphaRedGreenBlue - argb()
-Used to set the desired colour. Known to work with Themeable, Foreground, Background.
+Used to set the desired colour. Known to work with [Themeable](#themeable---themeable), [Foreground](#foreground), [Background](#background).
 
 **Syntax:**
 ```
@@ -243,7 +243,7 @@ fontface="Segoe UI"
 
 
 # Padding
-Allows us to set the padding of an element. Known to work with Themeable, Rect.
+Allows us to set the padding of an element. Known to work with [Themeable](#themeable---themeable), [Rect](#rect---rect).
 
 **Example:**
 ```
@@ -254,7 +254,7 @@ padding="rect(2rp, 0rp, 0rp, 0rp)"
 
 
 # Rect - rect()
-Allows us to set the size of each side of something. Known to work with Themeable, GetThemeMargins, Padding.
+Allows us to set the size of each side of something. Known to work with [Themeable](#themeable---themeable), [GetThemeMargins](#getthememargins---gtmar), [Padding](#padding).
 
 **Syntax:**
 ```
@@ -270,7 +270,7 @@ rect(2rp, 0rp, 3rp, 0rp)
 
 
 # Background
-Used to set the background colour. Known to work with Themeable, AlphaRedGreenBlue, GetThemeColor, DrawThemeBackground.
+Used to set the background colour. Known to work with [Themeable](#themeable---themeable), [AlphaRedGreenBlue](#alpharedgreenblue---argb), [GetThemeColor](#getthemecolor---gtc), [DrawThemeBackground](#drawthemebackground---dtb).
 
 **Example:**
 ```
@@ -315,7 +315,7 @@ cursor="IBeam"
 
 
 # DrawThemeBackground - dtb()
-For use of a `msstyles` image property. Known to be used with Content, Themeable, Background.
+For use of a `msstyles` image property. Known to be used with [Content](#content), [Themeable](#themeable---themeable), [Background](#background).
 ⚠️ The class, part, or state it reads from doesn't have to be a graphic. It's set by `BGTYPE:ENUM`. So you can have gradients (`horizontal`, `vertical`, and `radial`), `borderfill`, or `images`.
 
 **Syntax:**
@@ -338,7 +338,7 @@ background="dtb(ItemsView::ListView, 6, 2)"
 
 
 # GetThemeColor - gtc()
-For use of a `msstyles` colour property. Known to be used with Themeable, Foreground, [BorderColor](<>), Background, [SortColumn](<>), [Gradient](<>).
+For use of a `msstyles` colour property. Known to be used with [Themeable](#themeable---themeable), [Foreground](#foreground), BorderColor, [Background](#background), SortColumn, Gradient.
 
 **Syntax:**
 ```
@@ -360,7 +360,7 @@ foreground="gtc(ItemsView, 0, 0, 3803)"
 
 
 # GetThemeFont - gtf()
-For setting the font with a `msstyles` property. Known to be used with [Font](<>), Themeable.
+For setting the font with a `msstyles` property. Known to be used with [Font](#font), [Themeable](#themeable---themeable).
 
 **Syntax:**
 ```
@@ -387,7 +387,7 @@ font="gtf(TextStyle, 1, 0, 809)"
 # GetThemeMargins - gtmar()
 For setting the margin with a `msstyles` property.
 
-⚠️ This can be used for any property using a Rect such as: `padding`, `margin`, and `borderthickness`.
+⚠️ This can be used for any property using a [Rect](#rect---rect) such as: `padding`, `margin`, and `borderthickness`.
 
 ⚠️ `rect()`'s values go (`left`, `top`, `right`, `bottom`) whereas in the msstyles it's (`left`, `right`, `top`, `bottom`).
 
@@ -412,7 +412,7 @@ padding="gtmar(SearchBox, 1, 0, 3602)"
 
 
 # GetThemeMetrics - gtmet()
-For setting the metrics with a `msstyles` property. Known to be used with Width, Height.
+For setting the metrics with a `msstyles` property. Known to be used with [Width](#width), [Height](#height).
 
 **Syntax:**
 ```
@@ -446,7 +446,7 @@ dfc(parameter1, parameter2)
 
 
 # Themeable - themeable()
-For using mssyles themed elements. Known to be used with Content, Background, AlphaRedGreenBlue, DrawThemeBackground, GetThemeColor, GetThemeFont, Icon, Padding, Rect.
+For using mssyles themed elements. Known to be used with [Content](#content), [Background](#background), [AlphaRedGreenBlue](#alpharedgreenblue---argb), [DrawThemeBackground](#drawthemebackground---dtb), [GetThemeColor](#getthemecolor---gtc), [GetThemeFont](#getthemefont---gtf), [Icon](#icon---icon), [Padding](#padding), [Rect](#rect---rect).
 
 ⚠️ When defining sizes in `themeable()` wrap in single quotes.
 
@@ -468,7 +468,7 @@ foreground="themeable(gtc(ItemsView, 0, 0, 3803), windowtext)"
 
 
 # Width
-Set the width of the element. Known to be used with [rp](<>), [SystemMetric](<>), GetThemeMetrics.
+Set the width of the element. Known to be used with rp, SystemMetric, [GetThemeMetrics](#getthememetrics---gtmet).
 
 **Example:**
 ```
@@ -479,7 +479,7 @@ width="10rp"
 
 
 # Height
-Set the width of the element. Known to be used with [rp](<>), [SystemMetric](<>), GetThemeMetrics.
+Set the width of the element. Known to be used with rp, SystemMetric, [GetThemeMetrics](#getthememetrics---gtmet).
 
 **Example:**
 ```
@@ -668,7 +668,7 @@ visible="parameter1"
 
 
 # AnimationStrip
-Play a simple looped animation in DirectUI (example)
+Play a simple looped animation in DirectUI [(example)](https://discord.com/channels/1140065636857421945/1202671741969760277/1269663947435278407)
 
 **Resource example:**
 The resource must be a 32bit bitmap (bitmap with alpha channel, even it doesn't have any transparent part). Its layout must be horizontal with the same width for each frame. See an attachment for example bitmap below
@@ -680,7 +680,7 @@ The resource must be a 32bit bitmap (bitmap with alpha channel, even it doesn't 
 
 
 **content**
-_(Since it's kinda different with resbmp above. It's better to describe its meaning again)_
+_(Since it's kinda different with [resbmp](#resourcebitmap---resbmp) above. It's better to describe its meaning again)_
 
 `image_id` - The ID of the bitmap resource in the binary
 
@@ -704,7 +704,7 @@ _(Since it's kinda different with resbmp above. It's better to describe its mean
 
 **framewidth**
 Width of each frame. **Do not use rp for dpi-awareness in here or it will break your animation on hi-dpi**
-_(**Not an element's width.** You must specify it with width)_
+_(**Not an element's width.** You must specify it with [width](https://github.com/dominichayesferen/windows-dui-docs/blob/main/README.md#width))_
 
 **frameduration**
 Duration of each frame in milliseconds.
