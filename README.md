@@ -209,13 +209,19 @@ gradient(1stcolor, 2ndcolor, 3rdcolor, type)
 
 **Types:**
 
-`0`: **Horizontal Gradient** (only for gradients with 2 colors.)
-`1`: **Vertical Gradient** (only for gradients with 2 colors.)
-`2`: **Solid Color** (picks first color in gradient.)
-`3`: **Horizontal Gradient** (only for gradients with 3 colors, if used with 2 color gradient, a random color will be picked.)
-`4`: **Vertical Gradient** (only for gradients with 3 colors, if used with 2 color gradient, a random color will be picked.)
-`5`: **ThreeD Button Border** (seems to differ with colors)
-`6`: **Unknown**
+`0` - **Horizontal Gradient.** (only for gradients with 2 colors.)
+
+`1` - **Vertical Gradient.** (only for gradients with 2 colors.)
+
+`2` - **Solid Color.** (picks first color in gradient.)
+
+`3` - **Horizontal Gradient.** (only for gradients with 3 colors, if used with 2 color gradient, a random color will be picked.)
+
+`4` - **Vertical Gradient.** (only for gradients with 3 colors, if used with 2 color gradient, a random color will be picked.)
+
+`5` - **Button3d Border.** (seems to differ with colors)
+
+`6` - Unknown.
 
 **Example:**
 ```
