@@ -1,7 +1,7 @@
 # Windows 7+ DirectUI Documentation
 
 Also good sources:
-- https://github.com/world-windows-federation/dui70/blob/master/docs/ElementClass.g.txt
+- https://github.com/world-windows-federation/dui70/blob/main/docs/ElementClass.g.txt
 - https://www.vistastylebuilder.com/forum/index.php?topic=215.0
 
 ## Contributing
