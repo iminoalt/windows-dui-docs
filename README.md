@@ -1,7 +1,7 @@
 # Windows 7+ DirectUI Documentation
 
 Also good sources:
-- https://github.com/seven-mile/dui70/blob/master/docs/ElementClass.g.txt
+- https://github.com/world-windows-federation/dui70/blob/master/docs/ElementClass.g.txt
 - https://www.vistastylebuilder.com/forum/index.php?topic=215.0
 
 ## Contributing
@@ -41,7 +41,7 @@ resbmp(0xA623, 2, -1, 16, 16, 0, 0, library(ieframe.dll))
 - Contributed by @angelbruni
 
 
-# ContentAlign - contentalign()
+# ContentAlign
 Allows us to choose the alignment of the [Content](#content).
 
 - `TopLeft : 0x0 (0)`;
@@ -66,7 +66,7 @@ Allows us to choose the alignment of the [Content](#content).
 
 **Example:**
 ```
-contentalign(MiddleCenter)
+contentalign="MiddleCenter"
 ```
 
 - Contributed by @angelbruni
@@ -185,7 +185,7 @@ foreground="argb(255, 90, 103, 121)"
 
 
 # AlphaRedGreenBlue - argb()
-Used to set the desired colour. Known to work with [Themeable](#themeable---themeable), [Foreground](#foreground), [Background](#background).
+Used to set the desired colour. Known to work with [Themeable](#themeable---themeable), [Gradient](#gradient---gradient), [Foreground](#foreground), [Background](#background).
 
 **Syntax:**
 ```
@@ -199,6 +199,30 @@ argb(255, 90, 103, 121)
 
 - Contributed by @angelbruni
 
+# Gradient - gradient()
+Used to set a gradient. Known to work with [Themeable](#themeable---themeable), [AlphaRedGreenBlue](#alpharedgreenblue---argb), [Background](#background).
+
+**Syntax:**
+```
+gradient(1stcolor, 2ndcolor, 3rdcolor, type)
+```
+
+**Types:**
+
+`0`: **Horizontal Gradient** (only for gradients with 2 colors.)
+`1`: **Vertical Gradient** (only for gradients with 2 colors.)
+`2`: **Solid Color** (picks first color in gradient.)
+`3`: **Horizontal Gradient** (only for gradients with 3 colors, if used with 2 color gradient, a random color will be picked.)
+`4`: **Vertical Gradient** (only for gradients with 3 colors, if used with 2 color gradient, a random color will be picked.)
+`5`: **ThreeD Button Border** (seems to differ with colors)
+`6`: **Unknown**
+
+**Example:**
+```
+gradient(red, blue, green, 4)
+```
+
+- Contributed by iminonet
 
 # FontStyle
 Allows for setting the style of the font.
@@ -253,8 +277,17 @@ padding="rect(2rp, 0rp, 0rp, 0rp)"
 
 - Contributed by @angelbruni
 
+# Margin
+Allows us to set the margin of an element. Known to work with [Rect](#rect---rect).
 
-# Rect - rect()
+**Example:**
+```
+margin="rect(2rp, 0rp, 0rp, 0rp)"
+```
+
+- Contributed by iminonet
+
+# Rectangle - rect()
 Allows us to set the size of each side of something. Known to work with [Themeable](#themeable---themeable), [GetThemeMargins](#getthememargins---gtmar), [Padding](#padding).
 
 **Syntax:**
@@ -271,7 +304,7 @@ rect(2rp, 0rp, 3rp, 0rp)
 
 
 # Background
-Used to set the background colour. Known to work with [Themeable](#themeable---themeable), [AlphaRedGreenBlue](#alpharedgreenblue---argb), [GetThemeColor](#getthemecolor---gtc), [DrawThemeBackground](#drawthemebackground---dtb).
+Used to set the background colour. Known to work with [Themeable](#themeable---themeable), [Gradient](#gradient---gradient), [AlphaRedGreenBlue](#alpharedgreenblue---argb), [GetThemeColor](#getthemecolor---gtc), [DrawThemeBackground](#drawthemebackground---dtb).
 
 **Example:**
 ```
@@ -697,7 +730,7 @@ visible="parameter1"
 
 
 # Movie
-Used for playing FTR/Fluster files. (Microsoft's proprietary animation format)
+Used for playing FTR/Fluster files. (Microsoft's proprietary animation format based on Flash)
 
 ⚠️ Requires **layoutpos**, **[width](#width)** and **[height](#height)** to be set, or else it wont show up.
 
