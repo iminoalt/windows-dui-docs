@@ -17,19 +17,19 @@ Allows for use of bitmap resources in any binary DirectUI can read.
 resbmp(resource_id, parameter2, parameter3, parameter4, parameter5, parameter6, parameter7, library(binary))
 ```
 
-`resource_id` - The ID of the bitmap resource in the binary.
+`resource_id` - The ID of the bitmap resource in the binary. (it can either be hex value or name)
 
-`parameter2` - Unknown.
+`parameter2` - Blend mode.
 
-`parameter3` - Unknown.
+`parameter3` - Blend value.
 
-`parameter4` - Unknown.
+`parameter4` - Width.
 
-`parameter5` - Unknown.
+`parameter5` - Height.
 
-`parameter6` - Unknown.
+`parameter6` - Flip resource.
 
-`parameter7` - Unknown.
+`parameter7` - RTL.
 
 `library(binary)` - Binary name.
 
@@ -38,7 +38,7 @@ resbmp(resource_id, parameter2, parameter3, parameter4, parameter5, parameter6, 
 resbmp(0xA623, 2, -1, 16, 16, 0, 0, library(ieframe.dll))
 ```
 
-- Contributed by @angelbruni
+- Contributed by @angelbruni, Olivia, iminonet
 
 
 # ContentAlign
