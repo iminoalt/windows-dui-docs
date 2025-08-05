@@ -17,11 +17,11 @@ Allows for use of bitmap resources in any binary DirectUI can read.
 resbmp(resource_id, parameter2, parameter3, parameter4, parameter5, parameter6, parameter7, library(binary))
 ```
 
-`resource_id` - The ID of the bitmap resource in the binary. (it can either be hex value or name)
+`resource_id` - The ID of the bitmap resource in the binary. _**(it can either be hex value or the name of resource.)**_
 
 `parameter2` - Blend mode.
 
-`parameter3` - Blend value.
+`parameter3` - Blend value. _**(set the value to -1 if certain blend modes don't work)**_
 
 `parameter4` - Width.
 
