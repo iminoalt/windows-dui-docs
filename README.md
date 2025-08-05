@@ -176,6 +176,8 @@ This displays the icon 129 from NetworkExplorer.dll/NetworkExplorer.dll.mun.
 # Foreground
 Used to set the text colour. Known to work with [AlphaRedGreenBlue](#alpharedgreenblue---argb), [GetThemeColor](#getthemecolor---gtc).
 
+_**(You can use [named colors from XAML](https://learn.microsoft.com/dotnet/api/system.windows.media.colors?view=windowsdesktop-9.0) as an alternative for [AlphaRedGreenBlue](#alpharedgreenblue---argb) and [GetThemeColor](#getthemecolor---gtc).)**_
+
 **Example:**
 ```
 foreground="argb(255, 90, 103, 121)"
@@ -201,6 +203,8 @@ argb(255, 90, 103, 121)
 
 # Gradient - gradient()
 Used to set a gradient. Known to work with [Themeable](#themeable---themeable), [AlphaRedGreenBlue](#alpharedgreenblue---argb), [Background](#background).
+
+_**(You can use [named colors from XAML](https://learn.microsoft.com/dotnet/api/system.windows.media.colors?view=windowsdesktop-9.0) as an alternative for [AlphaRedGreenBlue](#alpharedgreenblue---argb) and [GetThemeColor](#getthemecolor---gtc).)**_
 
 **Syntax:**
 ```
@@ -311,6 +315,8 @@ rect(2rp, 0rp, 3rp, 0rp)
 
 # Background
 Used to set the background colour. Known to work with [Themeable](#themeable---themeable), [Gradient](#gradient---gradient), [AlphaRedGreenBlue](#alpharedgreenblue---argb), [GetThemeColor](#getthemecolor---gtc), [DrawThemeBackground](#drawthemebackground---dtb).
+
+_**(You can use [named colors from XAML](https://learn.microsoft.com/dotnet/api/system.windows.media.colors?view=windowsdesktop-9.0) as an alternative for [AlphaRedGreenBlue](#alpharedgreenblue---argb) and [GetThemeColor](#getthemecolor---gtc).)**_
 
 **Example:**
 ```
