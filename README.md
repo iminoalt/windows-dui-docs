@@ -23,9 +23,9 @@ resbmp(resource_id, parameter2, parameter3, parameter4, parameter5, parameter6, 
 
 `parameter3` - Blend value. _**(set the value to -1 if certain blend modes don't work)**_
 
-`parameter4` - Width.
+`parameter4` - Bitmap width, leave it at 0 for automatic width
 
-`parameter5` - Height.
+`parameter5` - Bitmap height, leave it at 0 for automatic height
 
 `parameter6` - Flip resource.
 
@@ -80,7 +80,7 @@ Allows for use of string resources in any binary DirectUI can read. Usually used
 resstr(resource_id, library(binary))
 ```
 
-`resource_id` - The ID of the bitmap resource in the binary.
+`resource_id` - The ID of the bitmap resource in the binary. _**(it can either be hex value or the number of resource.)**_
 `library(binary)` - Binary name.
 
 **Example:**
@@ -811,17 +811,17 @@ _(Since it's kinda different with [resbmp](#resourcebitmap---resbmp) above. It's
 
 `image_id` - The ID of the bitmap resource in the binary
 
-`3` - Unknown value. Leave it to 3 or your animation will have wrong colors. "Supposed to be the sizing type for your image."
+`3` - Blend mode.
   - Using `6` would make it blend with the color that is behind the element
   - `4` is suitable if your element is supposed to be a container for the entire app
   - `2` and `3` are suitable if your image is in "content" instead of background
   - `7` is suitable if you want to make it have transparency while keeping it "background" instead of using content, its also suitable for specifying sizing margins using borderthickness
 
-`0` - Unknown value
+`0` - Blend value.
 
-`image_width` - Bitmap width. Best to leave it 0
+`image_width` - Bitmap width, leave it at 0 for automatic width
 
-`image_height` - Bitmap height.
+`image_height` - Bitmap height, leave it at 0 for automatic height
 
 `0` - Unknown value
 
@@ -920,6 +920,39 @@ This will turn an element background to red if window is active, and yellow if n
 
 - Contributed by Vaporvance
 
+# MouseFocused
+`true/false` - Use with [if](#if-) to check if the element has been clicked or not. Has no effect when used in main element.
+
+**Example:**
+
+This will turn an element background to red if the element is clicked, and yellow if not clicked
+```
+<if MouseFocused="true">
+    <element background="red"/>
+</if>
+<if MouseFocused="false">
+    <element background="yellow"/>
+</if>
+```
+
+- Contributed by iminonet
+
+# KeyFocused
+`true/false` - Use with [if](#if-) to check if any key has been pressed or not. Has no effect when used in main element.
+
+**Example:**
+
+This will turn an element background to red if any key has been pressed, and yellow if any key is not pressed
+```
+<if KeyFocused="true">
+    <element background="red"/>
+</if>
+<if KeyFocused="false">
+    <element background="yellow"/>
+</if>
+```
+
+- Contributed by iminonet
 
 # MinSize
 Defines minimum width and height of an element
