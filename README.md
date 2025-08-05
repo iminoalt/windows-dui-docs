@@ -699,23 +699,45 @@ visible="parameter1"
 # Movie
 Used for playing FTR/Fluster files. (Microsoft's proprietary animation format)
 
+⚠️ Requires **layoutpos**, **[width](#width)** and **[height](#height)** to be set, or else it wont show up.
+
 **Example:**
 
 ```
 <Movie path="C:\Animation.ftr" height="50rp" width="50rp" SmoothingMode="high" repeat="true" AutoStart="true" AutoStop="false" layoutpos="top"/>
 ```
 
-**path**
+**Path**
 
-Specifies the path for the animation file.
+⚠️ **Must be the full path of your FTR file as seen on the example or else it wont work.**
+
+Specifies the path for the FTR file.
 
 **SmoothingMode**
 
-Defines if the smoothing should be high or low
+Defines if the animation should be anti-aliased or aliased.
 
-**repeat**
+`0` - Default
+`1` - Low
+`2` - High
 
-Defines if the animation should loop
+**Repeat**
+
+`true/false` - Defines if the animation should repeat indefinetly or not.
+
+**AutoStart**
+
+`true/false` - Defines if the animation should automatically start.
+
+**AutoStop**
+
+`true/false` - Defines if the animation should automatically stop.
+
+**DrawOutlines**
+
+`true/false` - Draws colored outlines on your animation for debugging purposes.
+
+- Contributed by iminonet
 
 # AnimationStrip
 Play a simple looped animation in DirectUI [(example)](https://discord.com/channels/1140065636857421945/1202671741969760277/1269663947435278407)
