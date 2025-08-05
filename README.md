@@ -555,6 +555,9 @@ height="10rp"
 
 
 # ShellExecute
+
+⚠️ Only works on the **NavigateButton** element.
+
 Allows for opening executable programs.
 
 **Example:**
@@ -568,6 +571,9 @@ shellexecute="%windir%\\explorer.exe"
 
 
 # ShellExecuteParams
+
+⚠️ Only works on the **NavigateButton** element.
+
 Allows use for opening a executable program with extra parameters. Must be used with `ShellExecute`.
 
 **Example:**
@@ -579,6 +585,9 @@ ShellExecuteParams="shell:::{78F3955E-3B90-4184-BD14-5397C15F1EFC}"
 
 
 # NavigationTargetRoot
+
+⚠️ Only works on the **NavigateButton** element.
+
 Allows for navigating to a directory.
 
 **Example:**
@@ -597,6 +606,8 @@ navigationtargetroot="Microsoft.Display"
 
 
 # NativationTargetRelative
+
+⚠️ Only works on the **NavigateButton** element.
 
 **Example:**
 
@@ -643,8 +654,6 @@ graphic(102, 2, -1, 0, 0, 0, 0)
 # Animation
 Allows us to set an basic animation for an element
 
-⚠️ Still Researching.
-
 **Syntax:**
 ```
 animation="parameter1|parameter2|parameter3|parameter4"
@@ -666,12 +675,12 @@ animation="parameter1|parameter2|parameter3|parameter4"
 `parameter2` - Easing type.
 
 - `None : 0x0 (0)`;
-- `Linear : 0x1 (1)`;
-- `Log : 0x2 (2)`;
-- `Exp : 0x3 (3)`;
-- `S : 0x4 (4)`.
+- `Linear : 0x1 (1)`; **Linear**
+- `Log : 0x2 (2)`; **Ease In**
+- `Exp : 0x3 (3)`; **Ease Out**
+- `S : 0x4 (4)`. **Expo**
 
-`parameter3` - Animation Speed.
+`parameter3` - Animation speed.
 
 - `VeryFast : 0x10000 (268435456)`;
 - `Fast : 0x20000000 (536870912)`;
@@ -693,7 +702,7 @@ animation="parameter1|parameter2|parameter3|parameter4"
 alpha|s|slow|delayshort
 ```
 
-- Contributed by Olivia
+- Contributed by Olivia, iminonet
 
 
 # ShadowIntensity
@@ -756,8 +765,10 @@ Specifies the path for the FTR file.
 
 Defines if the animation should be anti-aliased or aliased.
 
-`0` - Default
-`1` - Low
+`0` - Default _(same as low)_
+
+`1` - Low _(same as Default)_
+
 `2` - High
 
 **Repeat**
@@ -774,7 +785,7 @@ Defines if the animation should be anti-aliased or aliased.
 
 **DrawOutlines**
 
-`true/false` - Draws colored outlines on your animation for debugging purposes.
+`true/false` - Draws colored outlines on the animation for debugging purposes.
 
 - Contributed by iminonet
 
