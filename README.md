@@ -602,7 +602,7 @@ graphic(102, 2, -1, 0, 0, 0, 0)
 
 
 # Animation
-Allows us to set an animation for an element
+Allows us to set an basic animation for an element
 
 ⚠️ Still Researching.
 
@@ -611,9 +611,20 @@ Allows us to set an animation for an element
 animation="parameter1|parameter2|parameter3|parameter4"
 ```
 
-`parameter1` - Alpha
+`parameter1` - Animation type.
 
-`parameter2` - Unknown.
+- `Alpha : 0x100 (256)`;
+- `Position : 0x1000 (4096)`;
+- `Size : 0x2000 (8192)`;
+- `SizeH : 0x3000 (12288)`;
+- `SizeV : 0x4000 (16384)`;
+- `Rectangle : 0x5000 (20480)`;
+- `RectangleH : 0x6000 (24576)`;
+- `RectangleV : 0x7000 (28672)`;
+- `Reverse : 0x1000000 (16777216)`;
+- `Scale : 0x10000 (65536)`;
+  
+`parameter2` - Easing type.
 
 - `None : 0x0 (0)`;
 - `Linear : 0x1 (1)`;
@@ -621,7 +632,7 @@ animation="parameter1|parameter2|parameter3|parameter4"
 - `Exp : 0x3 (3)`;
 - `S : 0x4 (4)`.
 
-`parameter3` - Animation Speed most likely.
+`parameter3` - Animation Speed.
 
 - `VeryFast : 0x10000 (268435456)`;
 - `Fast : 0x20000000 (536870912)`;
@@ -638,16 +649,6 @@ animation="parameter1|parameter2|parameter3|parameter4"
 - `DelayMedium : 0x20 (32)`;
 - `DelayLong : 0x30 (48)`;
 
-`parameter5` - Unknown.
-
-`parameter6` - Unknown.
-
-`parameter7` - Unknown.
-
-`parameter8` - Unknown.
-
-`parameter9` - Unknown.
-
 **Example:**
 ```
 alpha|s|slow|delayshort
@@ -657,7 +658,7 @@ alpha|s|slow|delayshort
 
 
 # ShadowIntensity
-Sets the intensity for the shadow applied with fontstyle="Shadow"
+Sets the intensity of the shadow applied with fontstyle="Shadow"
 
 **Syntax:**
 ```
@@ -695,6 +696,26 @@ visible="parameter1"
 - Contributed by Olivia
 
 
+# Movie
+Used for playing FTR/Fluster files. (Microsoft's proprietary animation format)
+
+**Example:**
+
+```
+<Movie path="C:\Animation.ftr" height="50rp" width="50rp" SmoothingMode="high" repeat="true" AutoStart="true" AutoStop="false" layoutpos="top"/>
+```
+
+**path**
+
+Specifies the path for the animation file.
+
+**SmoothingMode**
+
+Defines if the smoothing should be high or low
+
+**repeat**
+
+Defines if the animation should loop
 
 # AnimationStrip
 Play a simple looped animation in DirectUI [(example)](https://discord.com/channels/1140065636857421945/1202671741969760277/1269663947435278407)
@@ -757,7 +778,7 @@ Defines where the first frame should start playing at. Set it to `0` for the fir
 
 
 # Font
-Font is a shorthand property for FontSize, FontWeight, FontStyle,FontFace,FontQuality
+Font is a shorthand property for FontSize, FontWeight, FontStyle, FontFace and FontQuality
 
 **Syntax:**
 ```
