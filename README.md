@@ -4,7 +4,7 @@ Also good sources:
 - https://github.com/world-windows-federation/dui70/blob/main/docs/ElementClass.g.txt
 - https://www.vistastylebuilder.com/forum/index.php?topic=215.0
 
-## Contributing
+# Contributing
 If you have additional documentation about DirectUI, fork the repository, add the documentation and make a commit.
 
 # Elements
