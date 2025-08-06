@@ -1,6 +1,6 @@
 # Windows 7+ DirectUI Documentation
 
-DirectUI is a (private) WPF-like C++ UI library created by Microsoft used for native applications, there was never a public, official or proper documentation made for this library. So this was made to fill the gap, enjoy.
+**DirectUI** is a (private) WPF-like C++ UI library created by Microsoft used for native applications, there was never a public, official or proper documentation made for this library. So this was made to fill the gap, enjoy.
 ###### This is a mirror of AngelBruni's Discord Server's #dui-docs channel
 
 Also good sources:
@@ -14,6 +14,9 @@ If you have additional documentation about DirectUI, fork the repository, add th
 
 ## Movie
 Used for playing FTR/Fluster files. (Microsoft's proprietary animation format based on Flash)
+
+_**Unfortunately there is currently no way to make custom FTR files, so you have to stick with the [animation attribute](##animation) for animations.**_
+
 
 ⚠️ Requires **layoutpos**, **[width](##width)** and **[height](##height)** to be set, or else it wont show up.
 
