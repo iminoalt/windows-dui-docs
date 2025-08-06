@@ -15,10 +15,10 @@ If you have additional documentation about DirectUI, fork the repository, add th
 ## Movie
 Used for playing FTR/Fluster files. (Microsoft's proprietary animation format based on Flash)
 
-_**Unfortunately there is currently no way to make custom FTR files, so you have to stick with the [animation attribute](##animation) for animations.**_
+_**Unfortunately there is currently no way to make custom FTR files, so you have to stick with the [animation attribute](#animation) for animations.**_
 
 
-⚠️ Requires **layoutpos**, **[width](##width)** and **[height](##height)** to be set, or else it wont show up.
+⚠️ Requires **layoutpos**, **[width](#width)** and **[height](#height)** to be set, or else it wont show up.
 
 **Example:**
 
@@ -82,7 +82,7 @@ https://github.com/angelbruni/windows-dui-docs/raw/refs/heads/main/Bitmap111.bmp
 
 **content**
 
-_(Since it's kinda different with [resbmp](##resourcebitmap---resbmp) above. It's better to describe its meaning again)_
+_(Since it's kinda different with [resbmp](#resourcebitmap---resbmp) above. It's better to describe its meaning again)_
 
 `image_id` - The ID of the bitmap resource in the binary
 
@@ -107,7 +107,7 @@ _(Since it's kinda different with [resbmp](##resourcebitmap---resbmp) above. It'
 **framewidth**
 
 Width of each frame. **Do not use rp for dpi-awareness in here or it will break your animation on hi-dpi**
-_(**Not an element's width.** You must specify it with [width](##width))_
+_(**Not an element's width.** You must specify it with [width](#width))_
 
 **frameduration**
 
@@ -119,7 +119,7 @@ Defines where the first frame should start playing at. Set it to `0` for the fir
 
 **play**
 
-`true/false` - Play or pause your animation. Better use it with [if](##if-).
+`true/false` - Play or pause your animation. Better use it with [if](#if-).
 
 - Contributed by Vaporvance, OjasK
 
@@ -182,7 +182,7 @@ resbmp(uID, dBlendMode, dBlendValue, cx, cy, bFlip, bPremultiplied, library(modu
 
 
 ## ContentAlign
-Allows us to choose the alignment of the [Content](##content).
+Allows us to choose the alignment of the [Content](#content).
 
 - `TopLeft : 0x0 (0)`;
 - `TopCenter : 0x1 (1)`;
@@ -233,7 +233,7 @@ resstr(0x7AB4, library(shell32.dll))
 
 
 ## Icon - icon()
-Allows for use of icon group resources in any binary DirectUI can read. Known to be used with [Content](##content), [Themeable](##themeable---themeable).
+Allows for use of icon group resources in any binary DirectUI can read. Known to be used with [Content](#content), [Themeable](#themeable---themeable).
 
 **Syntax:**
 ```
@@ -255,7 +255,7 @@ icon(24, sysmetric(49), sysmetric(50), library(shell32.dll))
 
 
 ## accname
-An attribute used to show a string in a name (normally the control label). Known to also work with [ResourceString](##resourcestring---resstr).
+An attribute used to show a string in a name (normally the control label). Known to also work with [ResourceString](#resourcestring---resstr).
 
 **Examples:**
 
@@ -273,7 +273,7 @@ accname="resstr(0x7AB4, library(shell32.dll))"
 
 
 ## accdesc
-An attribute used to show a string in a description (normally used in tooltips). Known to also work with [ResourceString](##resourcestring---resstr).
+An attribute used to show a string in a description (normally used in tooltips). Known to also work with [ResourceString](#resourcestring---resstr).
 
 **Examples:**
 
@@ -291,7 +291,7 @@ accdesc="resstr(0x7AB4, library(shell32.dll))"
 
 
 ## Content
-An attribute used to display content. Known to also work with [Themeable](##themeable---themeable), [ResourceString](##resourcestring---resstr), [Icon](##icon---icon), [DrawThemeBackground](##drawthemebackground---dtb).
+An attribute used to display content. Known to also work with [Themeable](#themeable---themeable), [ResourceString](#resourcestring---resstr), [Icon](#icon---icon), [DrawThemeBackground](#drawthemebackground---dtb).
 
 **Example:**
 
@@ -304,9 +304,9 @@ This displays the icon 129 from NetworkExplorer.dll/NetworkExplorer.dll.mun.
 
 
 ## Foreground
-Used to set the text colour. Known to work with [AlphaRedGreenBlue](##alpharedgreenblue---argb), [GetThemeColor](##getthemecolor---gtc).
+Used to set the text colour. Known to work with [AlphaRedGreenBlue](#alpharedgreenblue---argb), [GetThemeColor](#getthemecolor---gtc).
 
-_**(You can use [named colors from XAML](https://learn.microsoft.com/dotnet/api/system.windows.media.colors?view=windowsdesktop-9.0) as an alternative for [AlphaRedGreenBlue](##alpharedgreenblue---argb) and [GetThemeColor](##getthemecolor---gtc).)**_
+_**(You can use [named colors from XAML](https://learn.microsoft.com/dotnet/api/system.windows.media.colors?view=windowsdesktop-9.0) as an alternative for [AlphaRedGreenBlue](#alpharedgreenblue---argb) and [GetThemeColor](#getthemecolor---gtc).)**_
 
 **Example:**
 ```
@@ -317,7 +317,7 @@ foreground="argb(255, 90, 103, 121)"
 
 
 ## AlphaRedGreenBlue - argb()
-Used to set the desired colour. Known to work with [Themeable](##themeable---themeable), [Gradient](##gradient---gradient), [Foreground](##foreground), [Background](##background).
+Used to set the desired colour. Known to work with [Themeable](#themeable---themeable), [Gradient](#gradient---gradient), [Foreground](#foreground), [Background](#background).
 
 **Syntax:**
 ```
@@ -332,9 +332,9 @@ argb(255, 90, 103, 121)
 - Contributed by @angelbruni
 
 ## Gradient - gradient()
-Used to set a gradient. Known to work with [Themeable](##themeable---themeable), [AlphaRedGreenBlue](##alpharedgreenblue---argb), [Background](##background).
+Used to set a gradient. Known to work with [Themeable](#themeable---themeable), [AlphaRedGreenBlue](#alpharedgreenblue---argb), [Background](#background).
 
-_**(You can use [named colors from XAML](https://learn.microsoft.com/dotnet/api/system.windows.media.colors?view=windowsdesktop-9.0) as an alternative for [AlphaRedGreenBlue](##alpharedgreenblue---argb) and [GetThemeColor](##getthemecolor---gtc).)**_
+_**(You can use [named colors from XAML](https://learn.microsoft.com/dotnet/api/system.windows.media.colors?view=windowsdesktop-9.0) as an alternative for [AlphaRedGreenBlue](#alpharedgreenblue---argb) and [GetThemeColor](#getthemecolor---gtc).)**_
 
 **Syntax:**
 ```
@@ -408,7 +408,7 @@ fontface="Segoe UI"
 
 
 ## Padding
-Allows us to set the padding of an element. Known to work with [Themeable](##themeable---themeable), [Rect](##rect---rect).
+Allows us to set the padding of an element. Known to work with [Themeable](#themeable---themeable), [Rect](#rect---rect).
 
 **Example:**
 ```
@@ -418,7 +418,7 @@ padding="rect(2rp, 0rp, 0rp, 0rp)"
 - Contributed by @angelbruni
 
 ## Margin
-Allows us to set the margin of an element. Known to work with [Rect](##rect---rect).
+Allows us to set the margin of an element. Known to work with [Rect](#rect---rect).
 
 **Example:**
 ```
@@ -428,7 +428,7 @@ margin="rect(2rp, 0rp, 0rp, 0rp)"
 - Contributed by iminonet
 
 ## Rectangle - rect()
-Allows us to set the size of each side of something. Known to work with [Themeable](##themeable---themeable), [GetThemeMargins](##getthememargins---gtmar), [Padding](##padding).
+Allows us to set the size of each side of something. Known to work with [Themeable](#themeable---themeable), [GetThemeMargins](#getthememargins---gtmar), [Padding](#padding).
 
 **Syntax:**
 ```
@@ -444,9 +444,9 @@ rect(2rp, 0rp, 3rp, 0rp)
 
 
 ## Background
-Used to set the background colour. Known to work with [Themeable](##themeable---themeable), [Gradient](##gradient---gradient), [AlphaRedGreenBlue](##alpharedgreenblue---argb), [GetThemeColor](##getthemecolor---gtc), [DrawThemeBackground](##drawthemebackground---dtb).
+Used to set the background colour. Known to work with [Themeable](#themeable---themeable), [Gradient](#gradient---gradient), [AlphaRedGreenBlue](#alpharedgreenblue---argb), [GetThemeColor](#getthemecolor---gtc), [DrawThemeBackground](#drawthemebackground---dtb).
 
-_**(You can use [named colors from XAML](https://learn.microsoft.com/dotnet/api/system.windows.media.colors?view=windowsdesktop-9.0) as an alternative for [AlphaRedGreenBlue](##alpharedgreenblue---argb) and [GetThemeColor](##getthemecolor---gtc).)**_
+_**(You can use [named colors from XAML](https://learn.microsoft.com/dotnet/api/system.windows.media.colors?view=windowsdesktop-9.0) as an alternative for [AlphaRedGreenBlue](#alpharedgreenblue---argb) and [GetThemeColor](#getthemecolor---gtc).)**_
 
 **Example:**
 ```
@@ -503,7 +503,7 @@ cursor="IBeam"
 
 
 ## DrawThemeBackground - dtb()
-For use of a `msstyles` image property. Known to be used with [Content](##content), [Themeable](##themeable---themeable), [Background](##background).
+For use of a `msstyles` image property. Known to be used with [Content](#content), [Themeable](#themeable---themeable), [Background](#background).
 
 ⚠️ The class, part, or state it reads from doesn't have to be a graphic. It's set by `BGTYPE:ENUM`. So you can have gradients (`horizontal`, `vertical`, and `radial`), `borderfill`, or `images`.
 
@@ -527,7 +527,7 @@ background="dtb(ItemsView::ListView, 6, 2)"
 
 
 ## GetThemeColor - gtc()
-For use of a `msstyles` colour property. Known to be used with [Themeable](##themeable---themeable), [Foreground](##foreground), BorderColor, [Background](##background), SortColumn, Gradient.
+For use of a `msstyles` colour property. Known to be used with [Themeable](#themeable---themeable), [Foreground](#foreground), BorderColor, [Background](#background), SortColumn, Gradient.
 
 **Syntax:**
 ```
@@ -550,7 +550,7 @@ foreground="gtc(ItemsView, 0, 0, 3803)"
 
 
 ## GetThemeFont - gtf()
-For setting the font with a `msstyles` property. Known to be used with [Font](##font), [Themeable](##themeable---themeable).
+For setting the font with a `msstyles` property. Known to be used with [Font](#font), [Themeable](#themeable---themeable).
 
 **Syntax:**
 ```
@@ -577,7 +577,7 @@ font="gtf(TextStyle, 1, 0, 809)"
 ## GetThemeMargins - gtmar()
 For setting the margin with a `msstyles` property.
 
-⚠️ This can be used for any property using a [Rect](##rect---rect) such as: `padding`, `margin`, and `borderthickness`.
+⚠️ This can be used for any property using a [Rect](#rect---rect) such as: `padding`, `margin`, and `borderthickness`.
 
 ⚠️ `rect()`'s values go (`left`, `top`, `right`, `bottom`) whereas in the msstyles it's (`left`, `right`, `top`, `bottom`).
 
@@ -602,7 +602,7 @@ padding="gtmar(SearchBox, 1, 0, 3602)"
 
 
 ## GetThemeMetrics - gtmet()
-For setting the metrics with a `msstyles` property. Known to be used with [Width](##width), [Height](##height).
+For setting the metrics with a `msstyles` property. Known to be used with [Width](#width), [Height](#height).
 
 **Syntax:**
 ```
@@ -637,7 +637,7 @@ dfc(parameter1, parameter2)
 
 
 ## Themeable - themeable()
-For using mssyles themed elements. Known to be used with [Content](##content), [Background](##background), [AlphaRedGreenBlue](##alpharedgreenblue---argb), [DrawThemeBackground](##drawthemebackground---dtb), [GetThemeColor](##getthemecolor---gtc), [GetThemeFont](##getthemefont---gtf), [Icon](##icon---icon), [Padding](##padding), [Rect](##rect---rect).
+For using mssyles themed elements. Known to be used with [Content](#content), [Background](#background), [AlphaRedGreenBlue](#alpharedgreenblue---argb), [DrawThemeBackground](#drawthemebackground---dtb), [GetThemeColor](#getthemecolor---gtc), [GetThemeFont](#getthemefont---gtf), [Icon](#icon---icon), [Padding](#padding), [Rect](#rect---rect).
 
 ⚠️ When defining sizes in `themeable()` wrap in single quotes.
 
@@ -659,7 +659,7 @@ foreground="themeable(gtc(ItemsView, 0, 0, 3803), windowtext)"
 - Contributed by @angelbruni
 
 ## valueWithHighContrastFallback - valueWithHighContrastFallback()
-For using mssyles themed elements while respecting High Contrast. Known to be used with [Content](##content), [Background](##background), [AlphaRedGreenBlue](##alpharedgreenblue---argb), [DrawThemeBackground](##drawthemebackground---dtb), [GetThemeColor](##getthemecolor---gtc), [GetThemeFont](##getthemefont---gtf), [Icon](##icon---icon), [Padding](##padding), [Rect](##rect---rect).
+For using mssyles themed elements while respecting High Contrast. Known to be used with [Content](#content), [Background](#background), [AlphaRedGreenBlue](#alpharedgreenblue---argb), [DrawThemeBackground](#drawthemebackground---dtb), [GetThemeColor](#getthemecolor---gtc), [GetThemeFont](#getthemefont---gtf), [Icon](#icon---icon), [Padding](#padding), [Rect](#rect---rect).
 
 ⚠️ When defining sizes in `valueWithHighContrastFallback()` wrap in single quotes.
 
@@ -681,7 +681,7 @@ The element will have the background defined by the image texture in `Explorer &
 - Contributed by @ImSwordQueen
 
 ## Width
-Set the width of the element. Known to be used with rp, SystemMetric, [GetThemeMetrics](##getthememetrics---gtmet).
+Set the width of the element. Known to be used with rp, SystemMetric, [GetThemeMetrics](#getthememetrics---gtmet).
 
 **Example:**
 ```
@@ -692,7 +692,7 @@ width="10rp"
 
 
 ## Height
-Set the width of the element. Known to be used with rp, SystemMetric, [GetThemeMetrics](##getthememetrics---gtmet).
+Set the width of the element. Known to be used with rp, SystemMetric, [GetThemeMetrics](#getthememetrics---gtmet).
 
 **Example:**
 ```
@@ -902,7 +902,7 @@ Font is a shorthand property for FontSize, FontWeight, FontStyle, FontFace and F
 ```
 
 `font_size` - Font size in pt.
-- See [FontSize](##fontsize).
+- See [FontSize](#fontsize).
 
 `font_weight` - Font weight.
 - `DontCare : 0x0 (0)`
@@ -918,10 +918,10 @@ Font is a shorthand property for FontSize, FontWeight, FontStyle, FontFace and F
 - `Heavy : 0x384 (900)`
 
 `font_style` - Font style. 
-- see [FontStyle](##fontstyle).
+- see [FontStyle](#fontstyle).
 
 `font_face` - Font face. 
-- see [FontFace](##fontface).
+- see [FontFace](#fontface).
 
 `font_quality` - Font quality. Very very optional.
 - `Default` - Follow system setting.
@@ -948,7 +948,7 @@ This will set the font to 12pt Arial
 
 
 ## WindowActive
-`true/false` - Use with [if](##if-) to check if window is active or not. Has no effect when used in main element.
+`true/false` - Use with [if](#if-) to check if window is active or not. Has no effect when used in main element.
 
 **Example:**
 
@@ -965,7 +965,7 @@ This will turn an element background to red if window is active, and yellow if n
 - Contributed by Vaporvance
 
 ## MouseFocused
-`true/false` - Use with [if](##if-) to check if the element has been clicked or not. Has no effect when used in main element.
+`true/false` - Use with [if](#if-) to check if the element has been clicked or not. Has no effect when used in main element.
 
 **Example:**
 
@@ -982,7 +982,7 @@ This will turn an element background to red if the element is clicked, and yello
 - Contributed by iminonet
 
 ## KeyFocused
-`true/false` - Use with [if](##if-) to check if any key has been pressed or not. Has no effect when used in main element.
+`true/false` - Use with [if](#if-) to check if any key has been pressed or not. Has no effect when used in main element.
 
 **Example:**
 
