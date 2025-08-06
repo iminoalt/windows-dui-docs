@@ -157,7 +157,7 @@ resbmp(uID, dBlendMode, dBlendValue, cx, cy, bFlip, bPremultiplied, library(modu
 - ``6`` = ? - calls LoadImageW
 - ``7`` = ? - Has alpha, calls LoadImageW
 
-`dBlendValue` - Unknown.
+`dBlendValue` - Unknown, set to **-1** if certain `dBlendMode` values don't work.
 
 `cx` - The width of the bitmap, leave as ``0`` to automatically use the width of the bitmap.
 
