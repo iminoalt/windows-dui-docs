@@ -180,6 +180,28 @@ resbmp(uID, dBlendMode, dBlendValue, cx, cy, bFlip, bPremultiplied, library(modu
 
 - Contributed by @angelbruni, Olivia
 
+## ID
+Used for setting an ID for elements so you can identify them in the program's backend.
+
+⚠️ It is obligatory to include **atom()** as seen in the example below.
+If you want a attribute that does a similar thing, but doesnt require **atom()**, check out Class.
+
+**Example:**
+```
+id="atom(element)"
+```
+
+- Contributed by iminonet
+
+## Class
+Used for setting an class, so you can identify it and use it for styling with If
+
+**Example:**
+```
+class="example"
+```
+
+- Contributed by iminonet
 
 ## ContentAlign
 Allows us to choose the alignment of the [Content](#content).
