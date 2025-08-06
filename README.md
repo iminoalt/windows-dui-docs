@@ -452,6 +452,18 @@ background="argb(255, 90, 103, 121)"
 
 - Contributed by @angelbruni
 
+## GridLayout - gridlayout()
+Allows us to make a grid layout.
+
+**Syntax:**
+```
+gridlayout(width,height)
+```
+
+`width` - Sets the grid width
+`height` - Sets the grid height
+
+- Contributed by iminonet
 
 ## Alpha
 Allows us to set the alpha (transparency) of an element.
