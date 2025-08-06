@@ -1,5 +1,7 @@
 # Windows 7+ DirectUI Documentation
 
+DirectUI is a (private) WPF-like C++ UI library created by Microsoft used for native applications, there was never a public, official or proper documentation made for this library. So this repository was made to fill that gap, so enjoy.
+
 Also good sources:
 - https://github.com/world-windows-federation/dui70/blob/main/docs/ElementClass.g.txt
 - https://www.vistastylebuilder.com/forum/index.php?topic=215.0
@@ -117,12 +119,12 @@ Defines where the first frame should start playing at. Set it to `0` for the fir
 Used for styling depending on the statement. The if can be used for (I think) any attribute.
 
 ```
-<if accdesc="resstr(31282, library(shell32.dll))">
-    <element content="icon(246, sysmetric(49), sysmetric(50), library(shell32.dll))"/>
+<if class="blue">
+    <element background="blue"/>
 </if>
 ```
 
-- Contributed by @angelbruni
+- Contributed by @angelbruni, iminonet
 
 
 # Attributes
