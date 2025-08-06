@@ -7,6 +7,125 @@ Also good sources:
 ## Contributing
 If you have additional documentation about DirectUI, fork the repository, add the documentation and make a commit.
 
+# Elements
+
+# Movie
+Used for playing FTR/Fluster files. (Microsoft's proprietary animation format based on Flash)
+
+⚠️ Requires **layoutpos**, **[width](#width)** and **[height](#height)** to be set, or else it wont show up.
+
+**Example:**
+
+```
+<Movie path="C:\Animation.ftr" height="50rp" width="50rp" SmoothingMode="high" repeat="true" AutoStart="true" AutoStop="false" layoutpos="top"/>
+```
+
+**Path**
+
+⚠️ **Must be the full path of your FTR file as seen on the example or else it wont work.**
+
+Specifies the path for the FTR file.
+
+**SmoothingMode**
+
+Defines if the animation should be anti-aliased or aliased.
+
+`0` - Default _(same as low)_
+
+`1` - Low _(same as Default)_
+
+`2` - High
+
+**Repeat**
+
+`true/false` - Defines if the animation should repeat indefinetly or not.
+
+**AutoStart**
+
+`true/false` - Defines if the animation should automatically start.
+
+**AutoStop**
+
+`true/false` - Defines if the animation should automatically stop.
+
+**DrawOutlines**
+
+`true/false` - Draws colored outlines on the animation for debugging purposes.
+
+- Contributed by iminonet
+
+# AnimationStrip
+Play a simple looped animation in DirectUI [(example)](https://discord.com/channels/1140065636857421945/1202671741969760277/1269663947435278407)
+
+https://github.com/user-attachments/assets/6f85694a-3add-4a4e-9998-2a84ff7f3ccf
+
+**Resource example:**
+The resource must be a 32bit bitmap (bitmap with alpha channel, even it doesn't have any transparent part). Its layout must be horizontal with the same width for each frame. See an attachment for example bitmap below
+
+https://github.com/angelbruni/windows-dui-docs/raw/refs/heads/main/Bitmap111.bmp
+
+**Example:**
+```
+<AnimationStrip content="resbmp(image_id,3,0,image_width,image_height,0,0,library(binary))" framewidth="25" frameduration="80" frameindex="0"/>
+```
+
+
+**content**
+
+_(Since it's kinda different with [resbmp](#resourcebitmap---resbmp) above. It's better to describe its meaning again)_
+
+`image_id` - The ID of the bitmap resource in the binary
+
+`3` - Blend mode.
+  - Using `6` would make it blend with the color that is behind the element
+  - `4` is suitable if your element is supposed to be a container for the entire app
+  - `2` and `3` are suitable if your image is in "content" instead of background
+  - `7` is suitable if you want to make it have transparency while keeping it "background" instead of using content, its also suitable for specifying sizing margins using borderthickness
+
+`0` - Blend value.
+
+`image_width` - Bitmap width, leave it at 0 for automatic width
+
+`image_height` - Bitmap height, leave it at 0 for automatic height
+
+`0` - Unknown value
+
+`0` - Unknown value. Leave it to 0 or your animation will have wrong colors.
+
+`library(binary)` - Binary name (Must be a DLL or exe in System32)
+
+**framewidth**
+
+Width of each frame. **Do not use rp for dpi-awareness in here or it will break your animation on hi-dpi**
+_(**Not an element's width.** You must specify it with [width](#width))_
+
+**frameduration**
+
+Duration of each frame in milliseconds.
+
+**frameindex**
+
+Defines where the first frame should start playing at. Set it to `0` for the first frame.
+
+**play**
+
+`true/false` - Play or pause your animation. Better use it with [if](#if-).
+
+- Contributed by Vaporvance, OjasK
+
+# `<if />`
+Used for styling depending on the statement. The if can be used for (I think) any attribute.
+
+```
+<if accdesc="resstr(31282, library(shell32.dll))">
+    <Button3d content="icon(246, sysmetric(49), sysmetric(50), library(shell32.dll))"/>
+</if>
+```
+
+- Contributed by @angelbruni
+
+
+# Attributes
 
 # ResourceBitmap - resbmp()
 
@@ -111,17 +230,6 @@ icon(24, sysmetric(49), sysmetric(50), library(shell32.dll))
 
 - Contributed by @angelbruni
 
-
-# `<if />`
-Used for styling depending on the statement. The if can be used for (I think) any attribute.
-
-```
-<if accdesc="resstr(31282, library(shell32.dll))">
-    <Button3d content="icon(246, sysmetric(49), sysmetric(50), library(shell32.dll))"/>
-</if>
-```
-
-- Contributed by @angelbruni
 
 
 # accname
@@ -749,110 +857,6 @@ visible="parameter1"
 
 - Contributed by Olivia
 
-
-# Movie
-Used for playing FTR/Fluster files. (Microsoft's proprietary animation format based on Flash)
-
-⚠️ Requires **layoutpos**, **[width](#width)** and **[height](#height)** to be set, or else it wont show up.
-
-**Example:**
-
-```
-<Movie path="C:\Animation.ftr" height="50rp" width="50rp" SmoothingMode="high" repeat="true" AutoStart="true" AutoStop="false" layoutpos="top"/>
-```
-
-**Path**
-
-⚠️ **Must be the full path of your FTR file as seen on the example or else it wont work.**
-
-Specifies the path for the FTR file.
-
-**SmoothingMode**
-
-Defines if the animation should be anti-aliased or aliased.
-
-`0` - Default _(same as low)_
-
-`1` - Low _(same as Default)_
-
-`2` - High
-
-**Repeat**
-
-`true/false` - Defines if the animation should repeat indefinetly or not.
-
-**AutoStart**
-
-`true/false` - Defines if the animation should automatically start.
-
-**AutoStop**
-
-`true/false` - Defines if the animation should automatically stop.
-
-**DrawOutlines**
-
-`true/false` - Draws colored outlines on the animation for debugging purposes.
-
-- Contributed by iminonet
-
-# AnimationStrip
-Play a simple looped animation in DirectUI [(example)](https://discord.com/channels/1140065636857421945/1202671741969760277/1269663947435278407)
-
-https://github.com/user-attachments/assets/6f85694a-3add-4a4e-9998-2a84ff7f3ccf
-
-**Resource example:**
-The resource must be a 32bit bitmap (bitmap with alpha channel, even it doesn't have any transparent part). Its layout must be horizontal with the same width for each frame. See an attachment for example bitmap below
-
-https://github.com/angelbruni/windows-dui-docs/raw/refs/heads/main/Bitmap111.bmp
-
-**Example:**
-```
-<AnimationStrip content="resbmp(image_id,3,0,image_width,image_height,0,0,library(binary))" framewidth="25" frameduration="80" frameindex="0"/>
-```
-
-
-**content**
-
-_(Since it's kinda different with [resbmp](#resourcebitmap---resbmp) above. It's better to describe its meaning again)_
-
-`image_id` - The ID of the bitmap resource in the binary
-
-`3` - Blend mode.
-  - Using `6` would make it blend with the color that is behind the element
-  - `4` is suitable if your element is supposed to be a container for the entire app
-  - `2` and `3` are suitable if your image is in "content" instead of background
-  - `7` is suitable if you want to make it have transparency while keeping it "background" instead of using content, its also suitable for specifying sizing margins using borderthickness
-
-`0` - Blend value.
-
-`image_width` - Bitmap width, leave it at 0 for automatic width
-
-`image_height` - Bitmap height, leave it at 0 for automatic height
-
-`0` - Unknown value
-
-`0` - Unknown value. Leave it to 0 or your animation will have wrong colors.
-
-`library(binary)` - Binary name (Must be a DLL or exe in System32)
-
-**framewidth**
-
-Width of each frame. **Do not use rp for dpi-awareness in here or it will break your animation on hi-dpi**
-_(**Not an element's width.** You must specify it with [width](#width))_
-
-**frameduration**
-
-Duration of each frame in milliseconds.
-
-**frameindex**
-
-Defines where the first frame should start playing at. Set it to `0` for the first frame.
-
-**play**
-
-`true/false` - Play or pause your animation. Better use it with [if](#if-).
-
-- Contributed by Vaporvance, OjasK
 
 
 # Font
