@@ -118,7 +118,7 @@ Used for styling depending on the statement. The if can be used for (I think) an
 
 ```
 <if accdesc="resstr(31282, library(shell32.dll))">
-    <Button3d content="icon(246, sysmetric(49), sysmetric(50), library(shell32.dll))"/>
+    <element content="icon(246, sysmetric(49), sysmetric(50), library(shell32.dll))"/>
 </if>
 ```
 
@@ -287,7 +287,7 @@ An attribute used to display content. Known to also work with [Themeable](##them
 
 This displays the icon 129 from NetworkExplorer.dll/NetworkExplorer.dll.mun.
 ```
-<Button3d content="icon(129, sysmetric(49), sysmetric(50), library(NetworkExplorer.dll))"/>
+<element content="icon(129, sysmetric(49), sysmetric(50), library(NetworkExplorer.dll))"/>
 ```
 
 - Contributed by @angelbruni
@@ -343,7 +343,7 @@ gradient(1stcolor, 2ndcolor, 3rdcolor, type)
 
 `4` - **Vertical Gradient.** (only for gradients with 3 colors, if used with 2 color gradient, a random color will be picked.)
 
-`5` - **Button3d Border.** (seems to differ with colors)
+`5` - **ThreeD Border.** (seems to differ with colors)
 
 `6` - Unknown.
 
