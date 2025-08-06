@@ -133,31 +133,42 @@ Allows for use of bitmap resources in any binary DirectUI can read.
 
 **Syntax:**
 ```
-resbmp(resource_id, parameter2, parameter3, parameter4, parameter5, parameter6, parameter7, library(binary))
+resbmp(uID, dBlendMode, dBlendValue, cx, cy, bFlip, bPremultiplied, library(module))
 ```
 
-`resource_id` - The ID of the bitmap resource in the binary. _**(it can either be hex value or the name of resource.)**_
+### [Required]
+`uID` - The ID of the bitmap resource in the binary.
+- Can be decimal or hexidecimal but must be valid of course.
 
-`parameter2` - Blend mode.
+`dBlendMode` - Unknown.
+- ``0`` = None - calls DirectUI::LoadDDBitmap, (device dependent bitmap)
+- ``1`` = ? - calls DirectUI::LoadDDBitmap, (device dependent bitmap)
+- ``2`` = ? - Has alpha, calls LoadImageW
+- ``3`` = ? - calls LoadImageW
+- ``4`` = ? - calls DirectUI::LoadDDBitmap, (device dependent bitmap)
+- ``5`` = ? - calls DirectUI::LoadDDBitmap, (device dependent bitmap)
+- ``6`` = ? - calls LoadImageW
+- ``7`` = ? - Has alpha, calls LoadImageW
 
-`parameter3` - Blend value. _**(set the value to -1 if certain blend modes don't work)**_
+`dBlendValue` - Unknown.
 
-`parameter4` - Bitmap width, leave it at 0 for automatic width
+`cx` - The width of the bitmap, leave as ``0`` to automatically use the width of the bitmap.
 
-`parameter5` - Bitmap height, leave it at 0 for automatic height
+`cy` - The height of the bitmap, leave as ``0`` to automatically use the height of the bitmap.
 
-`parameter6` - Flip resource.
+`bFlip` - Set whether to render the bitmap as flipped or not.
 
-`parameter7` - RTL.
+`bPremultiplied`(?) - Set whether to render the bitmap with premultiplied alpha or not.
 
-`library(binary)` - Binary name.
+### [optional]
+ `library(module)` - Module name, only required if loading from an external module, otherwise skip this parameter as it will automatically default to the current module.
 
 **Example:**
-```
-resbmp(0xA623, 2, -1, 16, 16, 0, 0, library(ieframe.dll))
+```xml
+<Element Content="resbmp(0xA623, 2, -1, 16rp, 16rp, 0, 0, library(ieframe.dll))"/>
 ```
 
-- Contributed by @angelbruni, Olivia, iminonet
+- Contributed by @angelbruni, Olivia
 
 
 # ContentAlign
@@ -199,7 +210,8 @@ Allows for use of string resources in any binary DirectUI can read. Usually used
 resstr(resource_id, library(binary))
 ```
 
-`resource_id` - The ID of the bitmap resource in the binary. _**(it can either be hex value or the number of resource.)**_
+`resource_id` - The ID of the bitmap resource in the binary.
+- Can be decimal or hexidecimal but must be valid of course.
 `library(binary)` - Binary name.
 
 **Example:**
