@@ -1,11 +1,12 @@
 # Windows 7+ DirectUI Documentation
 
 **DirectUI** is a (private) WPF-like C++ UI library created by Microsoft used for native applications, there was never a public, official or proper documentation made for this library. So this was made to fill the gap, enjoy.
-###### This is a mirror of AngelBruni's Discord Server's #dui-docs channel
+###### This is a mirror of AngelBruni's Discord Server's #dui-docs channel, albeit modified.
 
-Also good sources:
+Here are some other good sources/references/software for DirectUI stuff:
 - https://github.com/world-windows-federation/dui70/blob/main/docs/ElementClass.g.txt
 - https://www.vistastylebuilder.com/forum/index.php?topic=215.0
+- https://github.com/AEAEAEAE4343/Leet.UI.DuiKit
 
 # Contributing
 If you have additional documentation about DirectUI, fork the repository, add the documentation and make a commit.
@@ -13,12 +14,9 @@ If you have additional documentation about DirectUI, fork the repository, add th
 # Elements
 
 ## Movie
-Used for playing FTR/Fluster files. (Microsoft's proprietary animation format based on Flash)
+Used for playing FTR/Fluster files. (Microsoft's proprietary animation format based on SWF)
 
-_**Unfortunately there is currently no way to make custom FTR files, so you have to stick with the [animation attribute](#animation) for animations.**_
-
-
-⚠️ Requires **layoutpos**, **[width](#width)** and **[height](#height)** to be set, or else it wont show up.
+_**Unfortunately there is currently no way to make custom FTR files, so you have to stick with the [animation attribute](#animation) or [AnimationStrip](#AnimationStrip) for animations.**_
 
 **Example:**
 
