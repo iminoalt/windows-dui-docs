@@ -63,9 +63,7 @@ Defines if the animation should be anti-aliased or aliased.
 - Contributed by iminonet
 
 ## AnimationStrip
-Play a simple looped animation in DirectUI [(example)](https://discord.com/channels/1140065636857421945/1202671741969760277/1269663947435278407)
-
-https://github.com/user-attachments/assets/6f85694a-3add-4a4e-9998-2a84ff7f3ccf
+Play a simple looped animation in DirectUI [(example)](https://github.com/iminoalt/windows-dui-docs/raw/refs/heads/main/AnimationStripExample.mp4)
 
 **Resource example:**
 The resource must be a 32bit bitmap (bitmap with alpha channel, even it doesn't have any transparent part). Its layout must be horizontal with the same width for each frame. See an attachment for example bitmap below
