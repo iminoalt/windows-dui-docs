@@ -1,9 +1,8 @@
 # Windows 7+ DirectUI Documentation
 
 **DirectUI** is a (private) WPF-like C++ UI library created by Microsoft used for native applications, there was never a public, official or proper documentation made for this library. So this was made to fill the gap, enjoy.
-###### This is a mirror of AngelBruni's Discord Server's #dui-docs channel, albeit modified.
 
-Here are some other good sources/references/software for DirectUI stuff:
+Here are some miscellaneous sources, references and software for DirectUI-related stuff:
 - https://github.com/world-windows-federation/dui70/blob/main/docs/ElementClass.g.txt
 - https://www.vistastylebuilder.com/forum/index.php?topic=215.0
 - https://github.com/AEAEAEAE4343/Leet.UI.DuiKit
