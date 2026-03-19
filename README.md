@@ -173,7 +173,7 @@ resbmp(uID, dBlendMode, dBlendValue, cx, cy, bFlip, bPremultiplied, library(modu
 <Element Content="resbmp(0xA623, 2, -1, 16rp, 16rp, 0, 0, library(ieframe.dll))"/>
 ```
 
-- Contributed by @angelbruni, Olivia
+- Contributed by @angelbruni, Allison
 
 ## ID
 Used for setting an ID for elements so you can identify them in the program's backend.
